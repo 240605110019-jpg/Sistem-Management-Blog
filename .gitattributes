@@ -1,16 +1,19 @@
-# Paksa semua file PHP terdeteksi
+# Paksa semua file PHP dihitung sebagai PHP
+*.php linguist-language=PHP
 *.php linguist-detectable=true
 
-# Abaikan file HTML, CSS, JS agar tidak dihitung
+# Override file Hack/HH agar dianggap PHP
+*.hack linguist-language=PHP
+*.hh linguist-language=PHP
+
+# Abaikan file non-PHP agar tidak dihitung
 *.html linguist-detectable=false
 *.css linguist-detectable=false
 *.js linguist-detectable=false
+*.json linguist-detectable=false
+*.xml linguist-detectable=false
+*.md linguist-detectable=false
+*.txt linguist-detectable=false
 
 # Tandai folder vendor sebagai vendored (tidak dihitung)
 vendor/* linguist-vendored
-
-# Abaikan file konfigurasi atau dokumentasi
-*.md linguist-detectable=false
-*.txt linguist-detectable=false
-*.json linguist-detectable=false
-*.xml linguist-detectable=false
